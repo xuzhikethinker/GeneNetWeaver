@@ -26,6 +26,7 @@ THE SOFTWARE.
 
 package ch.epfl.lis.gnw;
 
+import java.awt.Frame;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -37,6 +38,9 @@ import org.apache.commons.math.optimization.CostException;
 import cern.colt.matrix.DoubleMatrix1D;
 import cern.colt.matrix.DoubleMatrix2D;
 import cern.colt.matrix.impl.DenseDoubleMatrix2D;
+import ch.epfl.lis.gnwgui.GnwGuiSettings;
+import ch.epfl.lis.gnwgui.windows.ErrorWindow;
+import ch.epfl.lis.gnwgui.windows.GenericWindow;
 
 
 /** 
@@ -256,16 +260,22 @@ public class SteadyStateExperiment extends Experiment {
 		
 		Solver solver = new Solver(solverType_, grn_, xy0);
 
-		do {
-			double t1 = t_;
-			// this steps the time by dt_, but using a smaller internal step size of the solver
-			// (getRate() may be called several times for one step)
-			t_ += solver.step();
-			
-			if (t_ != t1 + dt)
-				throw new RuntimeException("Solver failed to step time by dt, expected t = " + (t1+dt) + ", obtained t = " + t_);
-			
-		} while (!solver.converged() && t_ < maxt);
+		try{
+			do {
+				double t1 = t_;
+				// this steps the time by dt_, but using a smaller internal step size of the solver
+				// (getRate() may be called several times for one step)
+				t_ += solver.step();
+
+				if (t_ != t1 + dt)
+					throw new RuntimeException("Solver failed to step time by dt, expected t = " + (t1+dt) + ", obtained t = " + t_);
+
+			} while (!solver.converged() && t_ < maxt);
+		}catch(RuntimeException e){
+			ErrorWindow dialog = new ErrorWindow(new Frame(), false, "Duration (t_max) must be a multiple of [measured points - 1].");
+			dialog.setVisible(true);
+		}
+		
 		// note, the state at the last step is already saved both in ODE.state and grn.x_, grn.y_
 		
 		// save the time of this experiment
