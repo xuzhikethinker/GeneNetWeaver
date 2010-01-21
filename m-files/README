@@ -1,0 +1,12 @@
+GeneNetWeaver (GNW) - Matlab Scripts
+
+See the GNW user manual (available on gnw.sf.net) for a description of these files.
+ 
+1. dream3ss.m
+Loads and plots steady-state data (knockout and heterozygous knock-down experiments).
+
+2. dream3ts.m
+Loads and plots time series data
+
+3. evaluation.m
+Plots the PR and ROC curves and computes the area under the curves. This script was written by G.A. Stolovitzky, B. Jagla, and R. Prill for the DREAM challenges. It was modified slightly for use with GNW by T. Schaffter.

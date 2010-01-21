@@ -1,0 +1,5 @@
+Load a settings file using command-line argument:
+-s "file:////home/thomas/devel/java/gnw-epfl/settings.txt"
+
+VM arguments:
+-da -Xmx512m

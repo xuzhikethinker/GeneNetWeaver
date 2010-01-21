@@ -1,0 +1,2 @@
+[x] When extracting subnetworks, the button "cancel" doesn't work (it closes the window, but doesn't kill the process)
+[ ] Same also for visualization, if you visualize by accident a large network and you close the window, it keeps computing

@@ -1,0 +1,32 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {subsection}{\numberline {1.1}Overview}{3}
+\contentsline {subsection}{\numberline {1.2}License / how to cite us}{3}
+\contentsline {subsection}{\numberline {1.3}Using this manual}{3}
+\contentsline {subsection}{\numberline {1.4}How to contact the GNW project}{3}
+\contentsline {section}{\numberline {2}Getting Started}{4}
+\contentsline {subsection}{\numberline {2.1}Launching GNW}{4}
+\contentsline {subsection}{\numberline {2.2}Embedded tutorial}{4}
+\contentsline {section}{\numberline {3}The Network Manager}{5}
+\contentsline {subsection}{\numberline {3.1}Automatically loaded networks}{6}
+\contentsline {section}{\numberline {4}Opening and saving network structures and dynamical models}{6}
+\contentsline {subsection}{\numberline {4.1}Opening networks}{6}
+\contentsline {subsection}{\numberline {4.2}Saving networks}{6}
+\contentsline {section}{\numberline {5}Network file formats}{7}
+\contentsline {subsection}{\numberline {5.1}TSV format}{8}
+\contentsline {subsubsection}{Examples.}{8}
+\contentsline {subsection}{\numberline {5.2}GML format}{9}
+\contentsline {subsection}{\numberline {5.3}DOT format}{9}
+\contentsline {subsection}{\numberline {5.4}SBML format}{10}
+\contentsline {section}{\numberline {6}Visualizing networks}{10}
+\contentsline {section}{\numberline {7}Extracting subnetworks from a source network}{12}
+\contentsline {section}{\numberline {8}Random initialization of dynamics}{13}
+\contentsline {section}{\numberline {9}Simulation of experiments}{14}
+\contentsline {subsection}{\numberline {9.1}Description of exported files}{16}
+\contentsline {subsubsection}{Unsigned network structure / DREAM gold standard.}{16}
+\contentsline {subsubsection}{Signed network structure.}{17}
+\contentsline {subsubsection}{Dynamical network model.}{17}
+\contentsline {subsubsection}{Steady-state datasets.}{17}
+\contentsline {subsubsection}{Time series datasets.}{17}
+\contentsline {section}{\numberline {10}Visualization of data in Matlab}{18}
+\contentsline {section}{\numberline {11}Generating identical benchmarks as in DREAM3}{18}
+\contentsline {section}{\numberline {12}Evaluating your predictions}{19}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- JNLP File for GeneNetWeaver -->
+
+<jnlp spec="1.5+"
+      codebase="http://gnw.sourceforge.net/webstart"
+      href="gnw.jnlp"
+      version="2.0b">
+   <information>
+	<title>GeneNetWeaver 2.0 Beta</title>
+	<icon href="GNW-icon.png"/>
+	<!--<icon kind="shortcut" href="icon16x16.png" width="16" height="16"/>
+	<icon kind="shortcut" href="icon32x32.png" width="32" height="32"/>-->
+	<icon href="splash-screen.png" kind="splash"/>
+	<vendor>Laboratory of Intelligent Systems, EPFL</vendor>
+	<homepage href="http://gnw.sourceforge.net" />
+	<description>Tool to generate realistic in silico gene networks for performance assessment of reverse engineering Methods</description>
+	<description kind="short">Tool to generate realistic in silico gene networks</description>
+	<description kind="tooltip">Tool to generate realistic in silico gene networks</description>
+	<offline-allowed/>
+
+   <shortcut online="false">
+	<desktop />
+	<!-- Not used to name the application, only to create an item in the Windows menu for example. -->
+	<menu submenu="GeneNetWeaver 2.0 Beta" />
+   </shortcut>
+
+   </information>
+   <resources>
+	<!-- OutOfMemoryError with Java 1.5.0_19 (-Xmx512m seems to be ignored=
+	     Solution: use max-heap-size="512m" in complement of -Xmx512m that
+		       works fine with version 1.5.0_16- and 1.6+
+	-->
+	<j2se version="1.5+"
+	      href="http://java.sun.com/products/autodl/j2se"
+	      java-vm-args="-da -Xmx512m"
+	      max-heap-size="512m"/>
+	<jar href="gnwgui-2.0b.jar" main="true" download="eager"/>
+	<jar href="lib/collections-generic-4.01.jar"/>
+	<jar href="lib/colt-1.2.0.jar"/>
+	<jar href="lib/commons-math-1.2.jar"/>
+	<jar href="lib/dump.jar"/>
+	<jar href="lib/Filters.jar"/>
+	<jar href="lib/forms-1.2.1.jar"/>
+	<jar href="lib/grappa-1.5.jar"/>
+	<jar href="lib/growl-1.0.jar"/>
+	<jar href="lib/imod-0.9d.jar"/>
+	<jar href="lib/JSAP-2.1.jar"/>
+	<jar href="lib/jung-algorithms-2.0.jar"/>
+	<jar href="lib/jung-api-2.0.jar"/>
+	<jar href="lib/jung-graph-impl-2.0.jar"/>
+	<jar href="lib/jung-visualization-2.0.jar"/>
+	<jar href="lib/looks-2.2.1.jar"/>
+	<jar href="lib/MRJToolkitStubs.jar"/>
+	<jar href="lib/opencsv-1.8.jar"/>
+	<jar href="lib/osp.jar"/>
+	<jar href="lib/sbml2.jar"/>
+   </resources>
+   <security>
+	<all-permissions/>
+   </security>
+   <application-desc main-class="ch.epfl.lis.gnwgui.Main">
+	<argument>-s http://gnw.sf.net/webstart/settings.txt</argument>
+	<!--<argument>arg2</argument>-->
+   </application-desc>
+</jnlp>

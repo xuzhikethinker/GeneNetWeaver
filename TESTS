@@ -1,0 +1,74 @@
+[ ] Todo
+[x] Verified
+[!] Test failed 
+
+0. CONSISTENCY MATLAB <--> GNW ODEs
+===================================
+
+[XX] Steady-state
+	[XX] Wild-type
+	[XX] Knockouts
+	[XX] Knockdowns
+	[XX] Multifactorial
+	[ ] Double-knockouts
+	
+[XX] Time-series
+	[XX] Knockouts
+	[XX] Knockdowns
+	[XX] Multifactorial
+	[ ] Double-knockouts
+	
+=> The model (the kinetic equations) are implemented correctly (unless we make the same mistakes both in Matlab and in Java).
+=> The integration of the ODEs in GNW is correct both for steady-states and time-series 
+	
+	
+1. CONSISTENCY ODEs <--> SDEs
+=============================
+
+[XX] Time-series (TS): plot ODE and SDE solution, check that SDE follows ODE curve
+	[X] No noise (diffusionMultiplier = 0)
+	[XX] Little noise (diffusionMultiplier ~ 0)
+	[XX] Regular noise (diffusionMultiplier = 0.05)
+	
+[XX] Steady-state (SS): check the difference between ODE and SDE solution for no noise and little noise
+	[XX] Wild-type
+	[XX] Knockouts
+	[XX] Knockdowns
+	[XX] Multifactorial
+	[XX] Double-knockouts
+
+=> The numerical integration of ODEs and SDEs is correct, because we obtain the same result with two different methods.
+
+
+2. CONSISTENCY STEADY-STATES <--> TIME-SERIES
+=============================================
+
+[XX] Check that the same solution is obtained for steady-states and time-series with SDEs with no noise
+	[XX] Knockouts
+	[XX] Knockdowns
+	[XX] Multifactorial weak
+	[XX] Double-knockouts
+	
+=> Steady-states and time-series experiments give the same end point (for ODEs, this has been checked in Section 0)
+
+
+3. CONSISTENCY DREAM3 <--> DREAM4
+=================================
+
+[X] Simulate an .xml network of dream3 (after reintroducing the bug) and check that you reproduce the dream3 data
+	[X] Knockouts
+	[X] Knockdowns
+
+
+4. VARIOUS
+==========
+
+[XX] Run all experiments, rerun by loading all perturbations, check that results without noise are identical
+	=> Loading and saving multifactorial perturbations and dual knockouts works
+
+
+4. CONSISTENCY WITH RESULTS OF PREVIOUS CHALLENGE
+=================================================
+
+[X] Similar results with z-score method
+[ ] Similar results with AGE

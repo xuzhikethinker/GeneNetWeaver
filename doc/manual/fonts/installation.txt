@@ -1,0 +1,28 @@
+Installation of fonts for LaTeX
+===============================
+Based on the Linux distribution OpenSUSE 11.0
+=============================================
+
+For Mac and Window, the instructions bellow could be adapted.
+
+
+1. Install TeX Font Metrics (tfm)
+---------------------------------
+Copy "neuropol.tfm" and "rneuropol.tfm" in the following directory:
+/usr/share/texmf/fonts/tfm/
+
+2. Install Virtual Font (vf)
+----------------------------
+Copy "neuropol.vf" in the following directory:
+/usr/share/texmf/fonts/vf/
+
+3. Finalization
+---------------
+Add the line "rneuropol   neuropol.ttf Encoding=T1-WGL4.enc" at the end of the file:
+/usr/share/texmf/ttf2pk/ttfonts.map
+
+To take into account this modification, the database should be updated.
+# texhash
+
+If you use MiKTeX on Window:
+Start=> Programs=> MiKTeX => Maintenance => Refresh Filename Database
