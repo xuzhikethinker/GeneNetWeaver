@@ -1,5 +1,7 @@
 package ch.epfl.lis.gnwgui.windows;
 
+import java.awt.AWTError;
+import java.awt.AWTException;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Frame;
@@ -69,8 +71,13 @@ public class ErrorWindow extends GenericWindow {
 	 * @param errorShortDescription - A very brief description of the error (less than 65 Characters long). 
 	 */
 	public void setDescription(String errorShortDescription){
-		if(errorShortDescription.length() > 66)
-			throw new RuntimeException("The string provided to setDescription() in ErrorWindow is longer than 65 characters.");
+//		if(errorShortDescription.length() > 66)
+//			try {
+//				throw new AWTException("The string provided to setDescription() in ErrorWindow is longer than 65 characters.");
+//			} catch (AWTException e) {
+//				// TODO Auto-generated catch block
+//				
+//			}
 		setGeneralInformation(errorShortDescription);
 	}
 
